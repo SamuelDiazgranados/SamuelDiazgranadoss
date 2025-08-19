@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfdfd;
+  padding: 30px;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.checkout-left {
+  width: 55%;
+  background-color: white;
+  padding: 30px;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.formulario-pago h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.formulario-pago input,
+.formulario-pago select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+}
+
+.input-doble {
+  display: flex;
+  gap: 10px;
+}
+
+.input-doble input {
+  width: 100%;
+}
+
+.formulario-pago label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn-pagar {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.checkout-right {
+  width: 35%;
+  background-color: #f0f0f0;
+  padding: 30px;
+}
+
+.productos-carrito {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.producto {
+  width: 30%;
+}
+
+.producto img {
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.resumen-compra p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+hr {
+  margin: 10px 0;
+}

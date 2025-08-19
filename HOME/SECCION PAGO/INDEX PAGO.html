@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagar</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="checkout-container">
+    
+    <section class="checkout-left">
+      <img src="Imagenes/Logo.png" alt="Logo" class="logo"/>
+
+      <form class="formulario-pago">
+        <h2>Contacto</h2>
+        <input type="email" placeholder="Ingresa tu correo" required>
+      <label class="checkbox-label">
+  <input type="checkbox">
+  Enviarme novedades y ofertas por correo electrónico
+</label>
+
+        <h2>Información</h2>
+        <div class="input-doble">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Apellido">
+        </div>
+        <input type="text" placeholder="CC">
+        <input type="text" placeholder="Celular (Con Whatsapp)">
+        <div class="input-doble">
+          <input type="text" placeholder="País">
+          <input type="text" placeholder="Ciudad">
+        </div>
+        <input type="text" placeholder="Dirección">
+        <div class="input-doble">
+          <input type="text" placeholder="Barrio">
+          <input type="text" placeholder="Código postal">
+        </div>
+
+        <h2>Método de pago</h2>
+        <select>
+          <option>PSE</option>
+          <option>Tarjeta de crédito</option>
+          <option>Nequi / Daviplata</option>
+        </select>
+
+        <button class="btn-pagar">PAGAR AHORA</button>
+      </form>
+    </section>
+
+    <section class="checkout-right">
+      <div class="productos-carrito">
+        <div class="producto">
+          <img src="Imagenes/image 5.png" alt="">
+          <p>Camiseta Boxy Fit Majestic Angel<br><strong>$79.900,00</strong></p>
+        </div>
+        <div class="producto">
+          <img src="Imagenes/image 6.png" alt="">
+          <p>Jeans Baggy Lavado Vintage<br><strong>$150.000,00</strong></p>
+        </div>
+        <div class="producto">
+          <img src="Imagenes/image 4.png" alt="">
+          <p>Pantaloneta Street Dynamo<br><strong>$125.000,00</strong></p>
+        </div>
+      </div>
+
+      <div class="resumen-compra">
+        <p>Subtotal: <span>$354.900,00</span></p>
+        <p>Envío: <span>$15.900,00</span></p>
+        <hr>
+        <p><strong>TOTAL:</strong> <span><strong>$370.800,00</strong></span></p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

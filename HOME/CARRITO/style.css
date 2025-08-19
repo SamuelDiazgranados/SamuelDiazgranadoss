@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+.carrito-container {
+  background-color: #1b1b1b;
+  padding: 30px;
+  border-radius: 16px;
+  width: 420px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.carrito-header .info {
+  text-align: left;
+}
+
+.carrito-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.carrito-header em {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Botón de cerrar (X) */
+.cerrar-carrito {
+  background-color: #2b2b2b;
+  border: 1px solid #555;
+  padding: 6px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cerrar-carrito:hover {
+  background-color: #3c3c3c;
+}
+
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.producto img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto .nombre {
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+  color: #f0f0f0;
+}
+
+.producto .precio {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+
+.subtotal {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+  color: #fff;
+}
+
+/* Botón de comprar */
+.btn-comprar {
+  width: 100%;
+  padding: 14px;
+  background-color: #f5f5f5;
+  color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #000000;
+}
+.btn-comprar {
+  display: block;        /* que el enlace cubra toda la tarjeta */
+  text-decoration: none; /* quita el subrayado */
+  color: inherit;        /* toma el color del texto del div dentro */
+}
