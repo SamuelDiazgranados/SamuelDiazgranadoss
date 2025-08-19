@@ -3,150 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kitanai - Tienda</title>
-  <link rel="icon" type="image/icon" href="Imagenes/logo.png"> 
-  <link rel="stylesheet" href="STYLE.css">
+  <title>Sobre Nosotros - Rapidez</title>
+  <link rel="stylesheet" href="SOBRE-NOSOTROS.css">
 </head>
 <body>
   <header>
- <nav>
-  <div class="nav-left">
+    <nav>
+       <div class="nav-left">
     <div class="logo">
-      <img src="IMAGENES/logo.png" alt="Logo Brutal Sale">
+      <img src="Imagenes/logo.png" alt="Logo Brutal Sale">
     </div>
     <ul>
       <li><a href="HOME/INDEX home.html">INICIO</a></li>
-      <li><a href="INDEX.html">TIENDA</a></li>
-      <li><a href="HOME/SOBRE-NOSOTROS/INDEX.html">SOBRE NOSOTROS</a></li>
+      <li><a href="HOME/TIENDA/INDEX.html">TIENDA</a></li>
+      <li><a href="INDEX.html">SOBRE NOSOTROS</a></li>
     </ul>
   </div>
- <div class="nav-right">
-    <div class="header-icons">
-  <a href="#" class="search-btn">
-    <img src="Imagenes/fi_zoom-in.png" alt="Buscar">
-  </a>
-</div>
-<!-- Caja de búsqueda oculta -->
-<div class="search-box">
-  <input type="text" placeholder="Buscar...">
-</div>
-      
-     <a href="CARRITO/HTML CARRITO.html"><img src="Imagenes/Group 5.png" alt="Carrito"></a>
-    </a>
-</a>
-
-    <a href="USER/Index user.html"><img src="Imagenes/fi_user-check.png" alt="Usuario"></a>
-  </div>
-</nav>
-    <div class="carousel">
-  <div class="carousel-track">
-    <div class="carousel-slide"><img src="IMAGENES/Banner 3.png" alt="Banner 1"></div>
-    <div class="carousel-slide"><img src="IMAGENES/BANNER 2.webp" alt="Banner 2"></div>
-    <div class="carousel-slide"><img src="IMAGENES/banner 1.webp" alt="Banner 3"></div>
-  </div>
-
-  <!-- Botones -->
-  <button class="carousel-btn prev">&#10094;</button>
-  <button class="carousel-btn next">&#10095;</button>
-
-  <!-- Indicadores -->
-  <div class="carousel-dots"></div>
-</div>
-
+    </nav>
   </header>
 
-  <main class="catalogo">
-  <!-- Filtro lateral -->
-  <aside class="filtros">
-    <h3>Filtrar</h3>
-    <div class="filtro-grupo">
-      <h4>Categorías</h4>
-      <label><input type="checkbox"> Camisas</label>
-      <label><input type="checkbox"> Pantalones</label>
-      <label><input type="checkbox"> Accesorios</label>
-    </div>
+  <main>
+    <section class="hero">
+      <h1>Conócenos</h1>
+      <p>Nos mueve la pasión por crear cosas que digan algo, que cuenten una historia, que tengan alma. No seguimos reglas rígidas: exploramos, fallamos, probamos y aprendemos. Eso es lo que nos mantiene vivos como creativos y como equipo.</p>
+    </section>
 
-    <div class="filtro-grupo">
-      <h4>Precio</h4>
-      <input type="range" min="0" max="500" value="250">
-      <p>Hasta $250</p>
-    </div>
-
-    <div class="filtro-grupo">
-      <h4>Talla</h4>
-      <label><input type="checkbox"> S</label>
-      <label><input type="checkbox"> M</label>
-      <label><input type="checkbox"> L</label>
-      <label><input type="checkbox"> XL</label>
-    </div>
-  </aside>
-
-  <!-- Productos -->
-  <section class="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="grid-productos">
-      
-      <!-- Camisas -->
-      <div class="producto">
-        <a href="PRODUCTOR/1/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 1.png" alt="Camisa Negra">
-        <h3>Camiseta Boxy Fit 2pac Shakur</h3>
-        <p>$80.000</p>
-        <button>Añadir al carrito</button>
-        </a>
+    <section class="mision-vision">
+      <div class="texto">
+        <h2>Misión</h2>
+        <p>Ser una marca referente por su estilo único y su enfoque honesto, donde el diseño no siga modas, sino que imponga identidad. Queremos crecer con una comunidad que valore lo auténtico, lo hecho con dedicación, y que se sienta parte de algo más que solo estética: una forma de ver y vivir el diseño.</p>
       </div>
-
-      <div class="producto">
-        <a href="PRODUCTOR/2/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 2.png" alt="Camisa Estampada">
-        <h3>Jeans Regular Negro Contraste</h3>
-        <p>$95.000</p>
-        <button>Añadir al carrito</button>
-        </a>
+      <div class="texto">
+        <h2>Visión</h2>
+        <p>Empezamos desde cero, con una visión clara: diseñar con propósito y estilo propio. Hoy seguimos creciendo, sin perder lo que nos hace diferentes.</p>
       </div>
+    </section>
 
-      <div class="producto">
-        <a href="PRODUCTOR/3/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 3.png" alt="Camisa Oversize Blanca">
-        <h3>Camiseta Oversize Acid Wash The Rolling Stones</h3>
-        <p>$85.000</p>
-        <button>Añadir al carrito</button>
-        </a>
-      </div>
-
-      <div class="producto">
-        <a href="PRODUCTOR/4/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 4.png" alt="Camisa Roja">
-        <h3>Pantaloneta Street Kitanai</h3>
-        <p>$90.000</p>
-        <button>Añadir al carrito</button>
-        </a>
-      </div>
-
-      <!-- Pantalones -->
-      <div class="producto">
-        <a href="PRODUCTOR/5/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 5.png" alt="Pantalón Oversize Negro">
-        <h3>Camiseta Boxy Fit Majestic Ángel</h3>
-        <p>$120.000</p>
-        <button>Añadir al carrito</button>
-        </a>
-      </div>
-
-      <div class="producto">
-        <a href="PRODUCTOR/6/INDEX.html" class="producto-card">
-        <img src="IMAGENES/image 6.png" alt="Pantalón Cargo Beige">
-        <h3>Jeans Baggy Lavado Vintage</h3>
-        <p>$110.000</p>
-        <button>Añadir al carrito</button>
-        </a>
-      </div>
-
-    </div>
-  </section>
-</main>
-
-
+    <section class="historia">
+      <h2>Historia</h2>
+      <p>Diseñar con autenticidad, pasión y propósito. Nos dedicamos a crear experiencias visuales que conecten con las personas, cuenten historias reales y reflejen la esencia de cada proyecto. Creemos en el poder del diseño como una herramienta para comunicar, inspirar y transformar.</p>
+    </section>
+  </main>
   <footer>
     <div class="footer-content">
       <div>
@@ -179,58 +76,5 @@
       </div>
     </div>
   </footer>
-  <script>
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-const dotsNav = document.querySelector('.carousel-dots');
-
-// Crear dots
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  if (i === 0) dot.classList.add('active');
-  dotsNav.appendChild(dot);
-});
-
-const dots = Array.from(dotsNav.children);
-let currentIndex = 0;
-
-function updateCarousel(index) {
-  track.style.transform = `translateX(-${100 * index}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
-  currentIndex = index;
-}
-
-nextBtn.addEventListener('click', () => {
-  let nextIndex = (currentIndex + 1) % slides.length;
-  updateCarousel(nextIndex);
-});
-
-prevBtn.addEventListener('click', () => {
-  let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel(prevIndex);
-});
-
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => updateCarousel(i));
-});
-
-// Auto-play cada 5 segundos
-setInterval(() => {
-  let nextIndex = (currentIndex + 1) % slides.length;
-  updateCarousel(nextIndex);
-}, 5000);
-</script>
-<script>
-  const searchBtn = document.querySelector('.search-btn');
-  const searchBox = document.querySelector('.search-box');
-
-  searchBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchBox.classList.toggle('active');
-  });
-</script>
 </body>
 </html>
