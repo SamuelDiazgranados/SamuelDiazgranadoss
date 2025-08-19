@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitanai - Home</title>
+  <link rel="icon" type="image/icon" href="Imagenes/logo.png"> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+ <nav>
+  <div class="nav-left">
+    <div class="logo">
+      <img src="Imagenes/logo.png" alt="Logo Brutal Sale">
+    </div>
+    <ul>
+  <li><a href="INDEX home.html">INICIO</a></li>
+  <li><a href="TIENDA/INDEX.html">TIENDA</a></li>
+  <li><a href="SOBRE-NOSOTROS/INDEX.html">SOBRE NOSOTROS</a></li>
+</ul>
+  </div>
+  <div class="nav-right">
+    <div class="header-icons">
+  <a href="#" class="search-btn">
+    <img src="Imagenes/fi_zoom-in.png" alt="Buscar">
+  </a>
+</div>
+<!-- Caja de búsqueda oculta -->
+<div class="search-box">
+  <input type="text" placeholder="Buscar...">
+</div>
+      
+     <a href="CARRITO/HTML CARRITO.html"><img src="Imagenes/Group 5.png" alt="Carrito"></a>
+    </a>
+</a>
+
+    <a href="USER/Index user.html"><img src="Imagenes/fi_user-check.png" alt="Usuario"></a>
+  </div>
+</nav>
+    <div class="carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="Imagenes/Banner 3.png" alt="Banner 1"></div>
+    <div class="carousel-slide"><img src="Imagenes/BANNER 2.webp" alt="Banner 2"></div>
+    <div class="carousel-slide"><img src="Imagenes/banner 1.webp" alt="Banner 3"></div>
+  </div>
+
+  <!-- Botones -->
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+
+
+  </header>
+
+  <main>
+    <section class="categorias">
+      <h2>ENCUENTRA...</h2>
+      <div class="grid-categorias">
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/1.png" alt="Básicas"><p>Básicas</p></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/2.png" alt="Jeans"><p>Jeans</p></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/3.png" alt="Estampadas"><p>Estampadas</p></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/4.png" alt="Joggers"><p>Joggers</p></a></div>
+      </div>
+      
+    </section>
+
+    <section class="novedades">
+      <h2>NOVEDADES</h2>
+      <div class="productos">
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/image (3).png"><p>Camiseta Boxy Fit Heavenly Grace</p><span>$79.000</span></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/image (2).png"><p>Camiseta Oversize Poison Garden</p><span>$84.000</span></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/image (1).png"><p>Camiseta Oversize DB13 Negro con Bordado</p><span>$95.000</span></a></div>
+        <div><a href="TIENDA/INDEX.html"><img src="Imagenes/image chica.png"><p>Crop Top Para Mujer Essential Black</p><span>$86.000</span></a></div>
+      </div>
+      
+      <button><a href="TIENDA/INDEX.html" class="producto-card">VER MÁS</a></button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Categorías</h4>
+        <ul>
+          <li>Camisas</li>
+          <li>Pantalones</li>
+          <li>Accesorios</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicio al cliente</h4>
+        <ul>
+          <li>Preguntas frecuentes</li>
+          <li>Contacto</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Información</h4>
+        <ul>
+          <li>Términos y condiciones</li>
+          <li>Política de privacidad</li>
+        </ul>
+      </div>
+      <div class="newsletter">
+        <p>¡Suscríbete!</p>
+        <input type="email" placeholder="Ingresa tu correo">
+        <button>Enviar</button>
+        
+      </div>
+    </div>
+   
+  </section>
+</div>
+
+  </footer>
+  <script>
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const dotsNav = document.querySelector('.carousel-dots');
+
+// Crear dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  if (i === 0) dot.classList.add('active');
+  dotsNav.appendChild(dot);
+});
+
+const dots = Array.from(dotsNav.children);
+let currentIndex = 0;
+
+function updateCarousel(index) {
+  track.style.transform = `translateX(-${100 * index}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+  currentIndex = index;
+}
+
+nextBtn.addEventListener('click', () => {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(nextIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel(prevIndex);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => updateCarousel(i));
+});
+
+// Auto-play cada 5 segundos
+setInterval(() => {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(nextIndex);
+}, 5000);
+</script>
+<script>
+  const searchBtn = document.querySelector('.search-btn');
+  const searchBox = document.querySelector('.search-box');
+
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchBox.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantaloneta Urban Gear</title>
+  <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+  <nav>
+  <div class="nav-left">
+    <div class="logo">
+      <img src="IMAGENES/logo.png" alt="Logo Brutal Sale">
+    </div>
+    <ul>
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">TIENDA</a></li>
+      <li><a href="#">SOBRE NOSOTROS</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <div class="header-icons">
+  <a href="#" class="search-btn">
+    <img src="IMAGENES/fi_zoom-in.png" alt="Buscar">
+  </a>
+</div>
+<!-- Caja de búsqueda oculta -->
+<div class="search-box">
+  <input type="text" placeholder="Buscar...">
+</div>
+    <a href="#"><img src="IMAGENES/Group 5.png" alt="Carrito"></a>
+    <a href="#"><img src="IMAGENES/fi_user-check.png" alt="Usuario"></a>
+  </div>
+</nav>
+    <div class="carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="IMAGENES/Banner 3.png" alt="Banner 1"></div>
+    <div class="carousel-slide"><img src="IMAGENES/BANNER 2.webp" alt="Banner 2"></div>
+    <div class="carousel-slide"><img src="IMAGENES/banner 1.webp" alt="Banner 3"></div>
+  </div>
+
+  <!-- Botones -->
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+
+  <!-- Indicadores -->
+  <div class="carousel-dots"></div>
+</div>
+
+  </header>
+
+  <!-- Detalle producto -->
+  <main class="producto-detalle">
+    <div class="img-container">
+      <img src="IMAGENES/image 1.png" alt="Pantaloneta Urban Gear">
+    </div>
+
+    <div class="info-container">
+      <h1>Camiseta Boxy Fit 2pac Shakur</h1>
+      <p class="precio">$80.000,00</p>
+
+      <div class="tallas">
+        <p>Talla:</p>
+        <button>S</button>
+        <button>M</button>
+        <button>L</button>
+        <button>XL</button>
+      </div>
+
+      <div class="cantidad">
+        <label for="qty">Cantidad:</label>
+        <input type="number" id="qty" min="1" value="1">
+      </div>
+
+      <div class="acciones">
+        <button class="btn-carrito">Agregar al carrito</button>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <p class="descripcion">
+        Pantaloneta de Streetwear con tela resistente y cómoda. Ideal para looks urbanos y relajados.
+      </p>
+
+      <div class="reseñas">
+        <button>⭐ Escribir una reseña</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Categorías</h4>
+        <ul>
+          <li>Camisas</li>
+          <li>Pantalones</li>
+          <li>Accesorios</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicio al cliente</h4>
+        <ul>
+          <li>Preguntas frecuentes</li>
+          <li>Contacto</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Información</h4>
+        <ul>
+          <li>Términos y condiciones</li>
+          <li>Política de privacidad</li>
+        </ul>
+      </div>
+      <div class="newsletter">
+        <p>¡Suscríbete!</p>
+        <input type="email" placeholder="Ingresa tu correo">
+        <button>Enviar</button>
+        
+      </div>
+    </div>
+  </footer>
+  <script>
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const dotsNav = document.querySelector('.carousel-dots');
+
+// Crear dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  if (i === 0) dot.classList.add('active');
+  dotsNav.appendChild(dot);
+});
+
+const dots = Array.from(dotsNav.children);
+let currentIndex = 0;
+
+function updateCarousel(index) {
+  track.style.transform = `translateX(-${100 * index}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+  currentIndex = index;
+}
+
+nextBtn.addEventListener('click', () => {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(nextIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel(prevIndex);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => updateCarousel(i));
+});
+
+// Auto-play cada 5 segundos
+setInterval(() => {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(nextIndex);
+}, 5000);
+</script>
+<script>
+  const searchBtn = document.querySelector('.search-btn');
+  const searchBox = document.querySelector('.search-box');
+
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchBox.classList.toggle('active');
+  });
+  
+</script>
+<script>
+  // Botones
+  const addCartBtn = document.querySelector(".add-cart");
+  const buyNowBtn = document.querySelector(".buy-now");
+  const sizeBtns = document.querySelectorAll(".size");
+  const quantityInput = document.getElementById("quantity");
+
+  let selectedSize = null;
+
+  // Seleccionar talla
+  sizeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      sizeBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      selectedSize = btn.textContent;
+    });
+  });
+
+  // Agregar al carrito
+  addCartBtn.addEventListener("click", () => {
+    const quantity = quantityInput.value;
+
+    if (!selectedSize) {
+      alert("Por favor selecciona una talla.");
+      return;
+    }
+
+    // Guardar producto en localStorage (simulación carrito)
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({
+      name: "Pantaloneta Urban Gear",
+      price: 125000,
+      size: selectedSize,
+      quantity: quantity
+    });
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(`Se agregó ${quantity} ${selectedSize} al carrito 🛒`);
+  });
+
+  // Comprar ahora
+  buyNowBtn.addEventListener("click", () => {
+    if (!selectedSize) {
+      alert("Selecciona una talla antes de comprar.");
+      return;
+    }
+    window.location.href = "checkout.html"; // Redirección al checkout
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+
+footer {
+  background: #111;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+footer h4 {
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.4rem;
+}
+
+.newsletter input {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 180px;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background: #ccff00;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-box {
+  position: absolute;
+  top: 60px; /* ajusta según la altura de tu header */
+  right: 20px;
+  background: #111;
+  border-radius: 30px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  width: 150px;
+}
+
+.search-box.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+header {
+  background: #000;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-right img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 450px; /* alto del banner */
+  overflow: hidden;
+  border-bottom: 3px solid #111;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background: white;
+}
+/* ===== Layout general ===== */
+.catalogo {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ===== Filtros ===== */
+.filtros {
+  width: 250px;
+  background: #f0f0f0;
+  color: #252525;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.filtros h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.filtro-grupo {
+  margin-bottom: 1.5rem;
+}
+
+.filtro-grupo h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.filtro-grupo label {
+  display: block;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.filtros input[type="range"] {
+  width: 100%;
+  accent-color: black;
+}
+
+/* ===== Productos ===== */
+.productos {
+  flex: 1;
+}
+
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.producto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.producto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* ===== Botón negro ===== */
+.producto button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.producto button:hover {
+  background: #333;
+}
+.producto-card {
+  display: block;        /* que el enlace cubra toda la tarjeta */
+  text-decoration: none; /* quita el subrayado */
+  color: inherit;        /* toma el color del texto del div dentro */
+}
